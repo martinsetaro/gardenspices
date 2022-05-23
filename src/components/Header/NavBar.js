@@ -3,7 +3,7 @@
 const NavBar = () => {
   return (
     <div className="navegadorPrincipal">
-      <span class="material-symbols-outlined">
+      <span className="material-symbols-outlined">
 shopping_cart
 </span>
         <a href="www.google.com.ar">Nosotros</a>
