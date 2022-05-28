@@ -15,7 +15,7 @@ const ProductosVenta = () => {
   return (
       <div className='item_ofertas'>
     {Productos.map(producto=>(
-      <ItemProductosVenta key={producto.id} nombre={producto.nombre} imagen={producto.imagen} precio={producto.precio} info={producto.info}/>
+      <ItemProductosVenta key={producto.id} nombre={producto.nombre} imagen={producto.imagen} precio={producto.precio} info={producto.info} producto={producto}/>
     ))}
       
       

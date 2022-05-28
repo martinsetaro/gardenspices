@@ -13,53 +13,56 @@ $fuenteTitulos:'Poppins', sans-serif;
 {
     width: 33rem;
     height: 30rem;
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    display:grid;
+    grid-template-areas: "main";
+    place-items: center;
     overflow: hidden;
+    border-radius: 1rem;
+    cursor: pointer;
+
     img 
     {
         width: 100%;
-        height: 100%;
-        transition: all 1s linear;
-    }
-}
-.boxes_info 
-{
-   width: 30rem;
-   height: 15rem;
-   display: flex;
-   flex-direction: column;
-   position: absolute;
-   
+        aspect-ratio: 1/1;
+        object-fit: cover;
 
-    h2 
-    {
-        color: #ffffff;
-        font-size: 4rem;
-        font-weight: 600;
-        text-align: center;
-        font-family:Arial, Helvetica, sans-serif;
-        margin-top:-3rem ;
-        text-transform: uppercase;
-        
+        transition: transform .4s,filter .4s;
     }
+    a
+    {
+        font-size: 3rem;
+        color: #ffffff;
+        font-family:Arial, Helvetica, sans-serif;
+        opacity: 0;
+        transition: transform .4s, opacity .4s;
+        text-decoration: none;
+        padding: 1rem;}
     p 
     {
         font-size: 1.8rem;
-        text-align: center;
         color: #ffffff;
-        font-size: 2rem;
         font-family: Arial, Helvetica, sans-serif;
-      
+        opacity: 0;
     }
 }
-.boxes img:hover 
+.boxes > *
 {
-    transform: scale(1.2,1.2);
-    filter: contrast(50%);
+    grid-area: main;
 }
+.boxes:is(:hover,:focus) > img 
+{
+    transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+.boxes:is(:hover,:focus) > a
+{
+    transform: scale(1.1);
+    opacity: 1;
+    
+}
+
+
 
 .btn_tienda 
 {
@@ -76,6 +79,9 @@ $fuenteTitulos:'Poppins', sans-serif;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
+
+
+
 .btn_tienda:hover 
 {
 opacity: .8;
