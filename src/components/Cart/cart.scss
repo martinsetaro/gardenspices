@@ -1,0 +1,85 @@
+
+
+
+.tabla 
+{
+    width: 80%;
+    height: 30rem;
+    margin: 12rem auto;
+    
+}
+.tablaItem 
+{
+    width: 100%;
+    height: 3rem;
+    
+    thead 
+    {
+    width: 100%;
+    height: 3rem;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: .1rem solid #3d3d3d;
+    background-color: #3d3d3d;
+    color: #ffffff;
+    
+    }
+   
+}
+.tbody 
+{
+    width: 100%;
+    height: 4rem;
+   
+    img 
+    {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+.itemContenido
+{
+    font-size: 2rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    td 
+    {
+        padding-top: 1rem;
+    }
+}
+.titulo_carritoVacio
+{
+    font-size: 2rem;
+    border: .1rem solid #3d3d3d;
+    padding: 1rem;
+    text-align: center;
+    position: absolute;
+    margin-left: 45rem;
+    margin-top: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3d3d3d;
+}
+.btn_delete
+{
+    box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+.btn_delete:hover {
+	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+	background-color:#bc3315;
+}
+.btn_delete:active {
+	position:relative;
+	top:1px;
+}

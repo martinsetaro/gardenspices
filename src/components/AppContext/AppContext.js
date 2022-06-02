@@ -33,6 +33,11 @@ const AppContext = ({children}) => {
     }
 }
 
+const removeItem = (id)=>{
+    const newCart = [...carrito].filter(producto => producto.id  !==  id);
+    setCarrito(newCart);
+}
+
    
 
 
@@ -42,7 +47,7 @@ const AppContext = ({children}) => {
 
     
     return (
-        <Provider value={{agregarCarrito,carrito}}>
+        <Provider value={{agregarCarrito,carrito,removeItem}}>
             {children}
         </Provider>
     );

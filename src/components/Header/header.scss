@@ -9,6 +9,7 @@ $fuenteTitulo : 'Macondo', cursive;
     width: 100%;
     height: 10rem;
     display: flex;
+    justify-content: space-around;
     padding: 1rem 3rem;
     background-color: #ffffff;
     border-bottom: .1rem solid #dfdfdf;
@@ -43,12 +44,7 @@ $fuenteTitulo : 'Macondo', cursive;
     transition: all .3s ease-in-out;
     position: relative;
  }
- span 
- {
-     font-size: 4rem;
-     margin-top: -1rem;
-     cursor: pointer;
- }
+
 
 }
 .navegadorPrincipal a::before 
@@ -87,3 +83,28 @@ $fuenteTitulo : 'Macondo', cursive;
     color:#ffffff;
 
 }
+.counter
+{
+    font-size: 5rem;
+    color: #242425;
+    position: absolute;
+    margin-left: 40rem;
+    margin-top: 1rem;
+   
+}
+.contador_productos {
+    background-color: #E72B03;
+    color: #ffffff;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-left: 7rem;
+    padding: .2rem;
+    margin-top: 1rem;
+    position: absolute;
+}
+
+
