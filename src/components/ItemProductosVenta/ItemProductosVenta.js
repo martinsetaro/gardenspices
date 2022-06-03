@@ -1,6 +1,7 @@
 import '../ItemProductosVenta/itemVentas.scss'
 import { contexto } from '../AppContext/AppContext'
 import { useContext } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ItemProductosVenta = ({nombre,imagen,precio,info,producto}) => {
 
@@ -10,6 +11,7 @@ const ItemProductosVenta = ({nombre,imagen,precio,info,producto}) => {
   
   const addCarrito=()=>{
     agregarCarrito(producto)
+    toast.success('Producto Agregado !!!')
   } 
  
 
@@ -23,6 +25,7 @@ const ItemProductosVenta = ({nombre,imagen,precio,info,producto}) => {
            <h3>{info}</h3>
            <h4>Descuento de 50% en la segunda compra</h4>
             <p>$ {precio}</p>
+            <Toaster/>
             <button onClick={addCarrito} className='btn_comprar'>Comprar</button>
            
         </div>

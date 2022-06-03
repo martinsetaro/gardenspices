@@ -8,6 +8,8 @@ const {Provider} = contexto;
 const AppContext = ({children}) => {
 
     const[carrito,setCarrito] = useState([]);
+    
+    
 
 
     const isInCart =(id)=>{
@@ -37,6 +39,10 @@ const removeItem = (id)=>{
     const newCart = [...carrito].filter(producto => producto.id  !==  id);
     setCarrito(newCart);
 }
+
+
+
+
 
    
 

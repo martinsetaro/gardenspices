@@ -1,11 +1,27 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { contexto } from '../AppContext/AppContext';
 import CartItem from '../CartItem/CartItem';
 import '../Cart/cart.scss'
 
 const Cart = () => {
 
-    const {carrito} = useContext(contexto);
+    const {carrito,actualizar} = useContext(contexto);
+    const [total,setTotal] = useState(0);
+
+
+
+
+   useEffect(()=>{
+    let sumaFinal=0;
+    carrito.forEach(carro => {
+  let sumaTotal = carro.precio * carro.cantidad;
+          sumaFinal += sumaTotal;
+          
+    })
+          setTotal(sumaFinal)  
+  },[carrito]);
+    
+
     
 
 
@@ -29,6 +45,12 @@ const Cart = () => {
        </tbody>
        
        </table>
+       <div className='botones_carrito'>
+         <button className='btn_accion vaciarCarrito'>Vaciar Carrito</button>
+         <button className='btn_accion volverComprar'>Volver a comprar</button>
+         <button className='btn_accion finalizarCompra'>Finalizar Compra</button>
+         <h2>Total:$ {total} </h2>
+       </div>
     </div>
   )
 }

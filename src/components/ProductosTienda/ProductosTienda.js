@@ -4,6 +4,7 @@ import aderezos from '../../assets/img/aderezos.jpg'
 import foodies from '../../assets/img/foodies.jpg'
 import {Link} from 'react-router-dom'
 
+
 const ProductosTienda = () => {
   return (
     <div className='productosTienda'>

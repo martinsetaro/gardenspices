@@ -10,6 +10,14 @@ const CartItem = ({contenido}) => {
 
     let precioTotal = precio * cantidad;
 
+
+   const borrarItem = ()=>{
+    removeItem(contenido.id);
+    
+   
+   }
+
+   
    
 
 
@@ -21,7 +29,7 @@ const CartItem = ({contenido}) => {
                   <td>$ {contenido.precio}</td>
                   <td>{contenido.cantidad}</td>
                   <td>$ {precioTotal}</td>
-                  <td><button className='btn_delete' onClick={()=>{removeItem(contenido.id)}}>X</button></td>
+                  <td><button className='btn_delete' onClick={borrarItem}>X</button></td>
               </tr>
   )
 }
