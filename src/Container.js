@@ -4,6 +4,7 @@ import Nosotros from "./components/Nosotros/Nosotros"
 import Cart from "./components/Cart/Cart"
 import Promo from "./components/Promo/Promo"
 import Veggie from '../src/components/Veggie/Veggie'
+import Basic from "./components/FormularioPago/FormularioPago"
 
 
 const Container = () => {
@@ -15,6 +16,7 @@ const Container = () => {
               <Route path= "/carrito" element={<Cart/>}></Route>
               <Route path="/promo" element={<Promo/>}/>
               <Route path="/veggie" element={<Veggie/>}/>
+              <Route path="/formulario_pago" element={<Basic/>}/>
           </Routes>
 
       </main>

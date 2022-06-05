@@ -2,6 +2,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import Nosotros from "./components/Nosotros/Nosotros"
 import Cart from "./components/Cart/Cart"
 import Promo from "./components/Promo/Promo"
+import Basic from "./components/FormularioPago/FormularioPago"
 
 const Main = () => {
   return (
@@ -10,6 +11,7 @@ const Main = () => {
             <Nosotros/>
             <Cart/>
             <Promo/>
+            <Basic/>
     </>
   )
 }

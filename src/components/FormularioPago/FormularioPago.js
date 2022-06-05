@@ -1,0 +1,46 @@
+import '../FormularioPago/formularioPago.scss'
+import React from 'react';
+import { useContext, useState, useEffect } from 'react';
+import { contexto } from '../AppContext/AppContext';
+import ItemFormularioPago from './ItemFormularioPago';
+
+
+const Basic = ()=> {
+
+    const {carrito} = useContext(contexto);
+    const [total,setTotal] = useState(0);
+
+
+
+
+   useEffect(()=>{
+    let sumaFinal=0;
+    carrito.forEach(carro => {
+  let sumaTotal = carro.precio * carro.cantidad;
+          sumaFinal += sumaTotal;
+          
+    })
+          setTotal(sumaFinal)  
+  },[carrito]);
+
+
+
+  
+
+
+
+  return (
+    <div className='formulario_pago'>
+        <h2>Productos Comprados = {carrito.length}</h2>
+        
+        {carrito.map( cart => 
+            <ItemFormularioPago key={cart.id} carro={cart} />)}
+       <div className='botones_pagar'>
+       <h3>Resta pagár un total de : ${total} Ars</h3>
+       <a href="https://link.mercadopago.com.ar/gardenspicesmp" target="_blank" rel="nofollow noopener noreferrer">Pagár</a>
+</div>
+    </div>
+  );
+}
+
+export default Basic;
