@@ -10,7 +10,7 @@ const ProductosTienda = () => {
     <div className='productosTienda'>
                       <div className='boxes producto1'>
                                <img src={promo} alt="promo" title='promo'/>
-                                 <Link to="/nosotros">Promo</Link>
+                                 <Link to="/promo">Promo</Link>
                               
                              <button className='btn_tienda'>Comprá</button>
                 
@@ -27,7 +27,7 @@ const ProductosTienda = () => {
         <div className='boxes producto3'>
         <img src={foodies} alt="promo" title='promo'/>
         
-                   <Link to="/productos">Foodies</Link>
+                   <Link to="/veggie">Veggies</Link>
                  
                  <button className='btn_tienda'>Comprá</button>
         

@@ -23,7 +23,7 @@ const ItemProductosVenta = ({nombre,imagen,precio,info,producto}) => {
            <img src={imagen} alt='img' title='img'/>
            <h2>{nombre}</h2>
            <h3>{info}</h3>
-           <h4>Descuento de 50% en la segunda compra</h4>
+           <h4>Productos discontinuos</h4>
             <p>$ {precio}</p>
             <Toaster/>
             <button onClick={addCarrito} className='btn_comprar'>Comprar</button>

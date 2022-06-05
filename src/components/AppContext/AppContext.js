@@ -41,7 +41,9 @@ const removeItem = (id)=>{
 }
 
 
-
+const vaciarCarrito = ()=>{
+    setCarrito([]);
+}
 
 
    
@@ -53,7 +55,7 @@ const removeItem = (id)=>{
 
     
     return (
-        <Provider value={{agregarCarrito,carrito,removeItem}}>
+        <Provider value={{agregarCarrito,carrito,removeItem,vaciarCarrito}}>
             {children}
         </Provider>
     );

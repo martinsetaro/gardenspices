@@ -1,11 +1,12 @@
 import { useContext, useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
 import { contexto } from '../AppContext/AppContext';
 import CartItem from '../CartItem/CartItem';
 import '../Cart/cart.scss'
 
 const Cart = () => {
 
-    const {carrito,actualizar} = useContext(contexto);
+    const {carrito,vaciarCarrito} = useContext(contexto);
     const [total,setTotal] = useState(0);
 
 
@@ -46,8 +47,8 @@ const Cart = () => {
        
        </table>
        <div className='botones_carrito'>
-         <button className='btn_accion vaciarCarrito'>Vaciar Carrito</button>
-         <button className='btn_accion volverComprar'>Volver a comprar</button>
+         <button className='btn_accion vaciarCarrito' onClick={()=>{vaciarCarrito()}}>Vaciar Carrito</button>
+         <Link to="/"><button className='btn_accion volverComprar'>Volver a comprar</button></Link>
          <button className='btn_accion finalizarCompra'>Finalizar Compra</button>
          <h2>Total:$ {total} </h2>
        </div>
