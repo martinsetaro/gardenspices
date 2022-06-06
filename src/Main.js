@@ -3,6 +3,7 @@ import Nosotros from "./components/Nosotros/Nosotros"
 import Cart from "./components/Cart/Cart"
 import Promo from "./components/Promo/Promo"
 import Basic from "./components/FormularioPago/FormularioPago"
+import ProductosVenta from "./components/ProductosVenta/ProductosVenta"
 
 const Main = () => {
   return (
@@ -12,6 +13,7 @@ const Main = () => {
             <Cart/>
             <Promo/>
             <Basic/>
+            <ProductosVenta/>
     </>
   )
 }

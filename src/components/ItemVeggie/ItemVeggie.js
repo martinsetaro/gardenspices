@@ -23,7 +23,8 @@ const addCarrito = ()=>{
         <img src={vegano.imagen} alt='img' title='img'/>
         <h3>{vegano.info}</h3>
         <p>$ {vegano.precio}</p>
-        <Toaster/>
+        <Toaster position="top-right"
+  reverseOrder={true}/>
         <button className='btn_comprar' onClick={addCarrito}>Comprar</button>
 
     </div>

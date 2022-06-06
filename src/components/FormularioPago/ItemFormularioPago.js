@@ -7,7 +7,7 @@ console.log(carro)
 
   return (
     <div className="item_formulario">
-        <h2> {carro.info} ====== x {carro.cantidad}</h2>
+        <h2> ° {carro.info}______x {carro.cantidad}</h2>
    </div>
   )
 }

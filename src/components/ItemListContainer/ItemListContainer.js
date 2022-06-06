@@ -6,7 +6,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import InfoCompra from '../InfoCompra/InfoCompra';
 import ProductosTienda from '../ProductosTienda/ProductosTienda';
-import ProductosVenta from '../ProductosVenta/ProductosVenta';
+import Nosotros from '../Nosotros/Nosotros';
+
 
 const ItemListContainer = () => {
 
@@ -37,7 +38,7 @@ const ItemListContainer = () => {
             </Carousel>
             <InfoCompra/>
             <ProductosTienda/>
-            <ProductosVenta/>
+           <Nosotros/>
           
 
 

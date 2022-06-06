@@ -25,7 +25,8 @@ const ItemProductosVenta = ({nombre,imagen,precio,info,producto}) => {
            <h3>{info}</h3>
            <h4>Productos discontinuos</h4>
             <p>$ {precio}</p>
-            <Toaster/>
+            <Toaster position="top-right"
+  reverseOrder={true}/>
             <button onClick={addCarrito} className='btn_comprar'>Comprar</button>
            
         </div>

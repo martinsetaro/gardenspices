@@ -5,10 +5,9 @@ import '../Cart/cart.scss'
 const CartItem = ({contenido}) => {
 
     const {removeItem} = useContext(contexto);
-
     const {precio,cantidad} = contenido;
-
-    let precioTotal = precio * cantidad;
+    
+    console.log(cantidad)
 
 
    const borrarItem = ()=>{
@@ -16,19 +15,20 @@ const CartItem = ({contenido}) => {
     
    
    }
+  
+   let total = cantidad * precio;
+   
+
+
 
    
-   
-
-
-
   return (
               <tr className="itemContenido">
                   <td><img src={contenido.imagen} alt="img" title="img"/></td>
                   <td>{contenido.nombre}</td>
-                  <td>$ {contenido.precio}</td>
+                  <td>$ {precio}</td>
                   <td>{contenido.cantidad}</td>
-                  <td>$ {precioTotal}</td>
+                  <td>${total}</td>
                   <td><button className='btn_delete' onClick={borrarItem}>X</button></td>
               </tr>
   )

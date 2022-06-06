@@ -12,9 +12,9 @@ const NavBar = () => {
     <div className="navegadorPrincipal">
      
         <Link to="/">Inicio</Link>
-        <a href="www.google.com.ar">Internacionales</a>
+        <Link to="/internacionales">Discontinuos</Link>
         <a href="www.google.com.ar">Contacto</a>
-        <a href="www.google.com.ar">Nosotros</a>
+        
 
     </div>
   )

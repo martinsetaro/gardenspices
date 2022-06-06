@@ -3,11 +3,14 @@ import React from 'react';
 import { useContext, useState, useEffect } from 'react';
 import { contexto } from '../AppContext/AppContext';
 import ItemFormularioPago from './ItemFormularioPago';
+import logo from '../../assets/img/logo.png'
+import swal from 'sweetalert';
+
 
 
 const Basic = ()=> {
 
-    const {carrito} = useContext(contexto);
+    const {carrito,vaciarCarrito} = useContext(contexto);
     const [total,setTotal] = useState(0);
 
 
@@ -23,6 +26,25 @@ const Basic = ()=> {
           setTotal(sumaFinal)  
   },[carrito]);
 
+  
+
+  const redireccion = ()=>{
+    setTimeout(()=>{
+      swal({
+        title: "Gracias por tu compra!!",
+  text: "Presiona el boton para continuar!",
+  icon: "success",
+  button:"Continuar"
+    }).then(function() {
+      window.location = "/";
+      
+    })
+    vaciarCarrito();
+   
+   
+  
+    },3000)
+  }
 
 
   
@@ -31,13 +53,15 @@ const Basic = ()=> {
 
   return (
     <div className='formulario_pago'>
+      <img src={logo} alt="img" title='img'/>
+      <h2>Pedido de Compra</h2>
         <h2>Productos Comprados = {carrito.length}</h2>
         
         {carrito.map( cart => 
             <ItemFormularioPago key={cart.id} carro={cart} />)}
        <div className='botones_pagar'>
-       <h3>Resta pagár un total de : ${total} Ars</h3>
-       <a href="https://link.mercadopago.com.ar/gardenspicesmp" target="_blank" rel="nofollow noopener noreferrer">Pagár</a>
+       <h3>Resta pagár un total de : <span>${total} Ars</span></h3>
+       <a onClick ={redireccion} href="https://link.mercadopago.com.ar/gardenspicesmp" target="_blank" rel="nofollow noopener noreferrer">Pagár</a>
 </div>
     </div>
   );

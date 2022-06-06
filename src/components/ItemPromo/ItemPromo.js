@@ -22,7 +22,8 @@ const addCarrito = ()=>{
         <img src={promo.imagen} alt='img' title='img'/>
         <h3>{promo.info}</h3>
         <p>$ {promo.precio}</p>
-        <Toaster/>
+        <Toaster position="top-right"
+  reverseOrder={true}/>
         <button className='btn_comprar' onClick={addCarrito}>Comprar</button>
 
 
